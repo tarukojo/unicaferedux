@@ -45,3 +45,5 @@ const Statistiikka = () => {
     </div >
   )
 }
+
+export default Statistiikka

@@ -8,7 +8,7 @@ const store = createStore(reducer)
 
 class App extends React.Component {
   klik = (nappi) => () => {
-
+    store.dispatch({ type: nappi})
   }
 
   render() {
@@ -25,3 +25,12 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+const renderApp = () => {
+    ReactDOM.render(<App />, document.getElementById('root'))
+}
+
+renderApp()
+store.subscribe(renderApp)
+
+export default App

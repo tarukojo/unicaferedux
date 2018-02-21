@@ -1,4 +1,3 @@
-import React from 'react'
 
 const initialState = {
     good: 0,
@@ -36,6 +35,8 @@ const counterReducer = (state = initialState, action) => {
           ok: 0,
           bad: 0
         }   
+        return state
+      default:
         return state
     }
     return state
